@@ -1,18 +1,16 @@
 .father {
   display: flex;
   height: 100vh;
-  gap: 10px;
-  justify-content: flex-start;
-
-  /* flex-wrap: flex 컨테이너가 '단일라인(single) or 다중라인(multi)'인지 제어 */
-  flex-wrap: nowrap;  /* default value: 단일라인 = 줄바꿈 없음, 한줄 너비에 맞게 item 요소가 찌그러짐(width가 작아짐) */
-  flex-wrap: wrap;    /* 다중라인 = 줄바꿈 허용 */
-  flex-wrap: wrap-reverse;  /* 다중라인 & 진행방향 reverse */
-
-  /* flex-flow: 'flex-direction' & 'flex-wrap'의 short-cut */
+  gap: 10px 20px;
   flex-flow: row wrap;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
+  justify-content: center;
+
+  /* align-items: cross axis 방향에서 '항목' 정렬을 제어 */
+  align-items: center;
+
+  /* align-content: cross axis 방향에서 '라인'(항목 사이의 여백)의 정렬을 제어
+    (only in 'multi-line' flex box = wrap)  */
+  align-content: flex-end;  
 }
 
 .box {
