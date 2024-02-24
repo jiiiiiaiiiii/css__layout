@@ -1,7 +1,7 @@
 .father {
   display: grid;
-  grid-template-columns: 100px 200px 50px;  /* 총 3개의 columns: 각 너비 */
-  grid-template-rows: 200px 100px;          /* 총 2개의 rows: 각 높이 */
+  grid-template-columns: [cucumber] 100px [potato] 200px [banana] 50px [brocoli];
+  grid-template-rows: 200px 100px;
   gap: 10px 20px;
 }
 
@@ -16,14 +16,11 @@
 
 .child:first-child {
   background-color: teal;
-  grid-row-start: 1;  /* 열방향: 처음부터 */
-  grid-row-end: -1;   /* 열방향: 끝까지 */
-  grid-row: 1 -1;     /* short cut */
+  grid-row: 1 / -1;
 }
 
 .child:last-child {
   background-color: aqua;
-  grid-column-start: 2; /* 행방향: 처음부터 */
-  grid-column-end: -1;  /* 행방향: 끝까지 */
-  grid-column: 2 -1;    /* short cut */
+  grid-column: 2 / -1;
+  grid-column: potato / brocoli;
 }
