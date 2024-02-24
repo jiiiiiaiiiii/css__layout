@@ -1,7 +1,15 @@
-body {
-  background-color: tomato;
+.father {
+  display: grid;
+  grid-template-columns: 100px 200px 50px;  /* 총 3개의 columns: 각 너비 */
+  grid-template-rows: 200px 100px;          /* 총 2개의 rows: 각 높이 */
+  gap: 10px 20px;
 }
 
-h1 {
+.child {
+  background-color: navy;
   color: white;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
