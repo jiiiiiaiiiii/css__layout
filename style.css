@@ -1,7 +1,22 @@
-body {
-  background-color: tomato;
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+  display: inline;        /* width와 height를 지원하지 않음 */
+  display: inline-block;  /* width와 height를 가진 inline */
+  display: block;         /* 1줄에 only 1개 요소 */
 }
 
-h1 {
-  color: white;
+.box:first-child {
+  float: left;
+  
+}
+
+.box:last-child {
+  float: right;
+}
+
+.box:nth-child(2) {
+  margin: 0 25%;  /* need calculating...😅 */
+  text-align: right;
 }
