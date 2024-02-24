@@ -1,38 +1,29 @@
 .father {
   display: flex;
   height: 100vh;
-  gap: 10px 20px;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;  
 }
 
 .box {
-  width: 200px;
   height: 200px;
-  background-color: navy;
   color: white;
   font-size: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* order: 0; --> defalut */
 }
 
-.box:nth-child(3) {
-  background-color: blueviolet;
-  order: 2;
-}
-
-.box:nth-child(6) {
-  background-color: aqua;
-  order: -1;
-}
-
+/* 
+  flex-grow: flex 컨테이너 자식요소가 얼마만큼의 공간을 차지할 수 있는지 제어
+  (px단위가 아닌 '비율'로 계산)
+ */
 .box:first-child {
-  align-self: flex-start; 
+  background-color: navy;
+  flex-grow: 1;
 }
 
 .box:last-child {
-  align-self: flex-end;
+  background-color: teal;
+  flex-grow: 0;
 }
