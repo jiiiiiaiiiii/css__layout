@@ -13,3 +13,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.child:first-child {
+  background-color: teal;
+  grid-row-start: 1;  /* 열방향: 처음부터 */
+  grid-row-end: -1;   /* 열방향: 끝까지 */
+  grid-row: 1 -1;     /* short cut */
+}
+
+.child:last-child {
+  background-color: aqua;
+  grid-column-start: 2; /* 행방향: 처음부터 */
+  grid-column-end: -1;  /* 행방향: 끝까지 */
+  grid-column: 2 -1;    /* short cut */
+}
