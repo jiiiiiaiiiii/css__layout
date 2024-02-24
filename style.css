@@ -13,25 +13,25 @@
   align-items: center;
   justify-content: center;
 }
-/*
-  flex-shrink: item이 얼마나 줄어드는지 (자식요소 간 상대적인 '비율'로 계산)
-  (값이 클수록 -> 가장 먼저, 가장 크게 축소됨)
-*/
+
 .box:first-child {
   background-color: navy;
-  flex-grow: 0;    /* 필요한 최소 너비만 차지 */
+
+  /*
+    flex-basis: 초기 size, 'main axis'를 따름!
+      => 같은 flex-glow를 가진 다른 자식요소와 확장 크기가 다름
+      => flex-shrink: 0; -> 'min-width / max-width'와 비슷한 기능    
+      => flex-grow: 0;   -> 'max-width / max-height'와 비슷한 기능
+  */
+  flex-grow: 0;
   flex-shrink: 3;
+  flex-basis: 500px;  /* 해당 요소가 초기 500px부터 커짐 */
+
+  /* flex: 'flex-grow' & 'flex-shrink' & 'flex-basis'의 short-cut */
+  flex: 0 3 500px;
 }
 
 .box:nth-child(2) { 
-  background-color: aqua;
-  flex-grow: 2;
-  flex-shrink: 0; /* 축소 ❌: 내부 text의 줄바꿈 일어나지 않음 */
-}
-
-.box:last-child {
   background-color: teal;
   flex-grow: 1;
-  flex-shrink: 1; /* default value */
 }
-
