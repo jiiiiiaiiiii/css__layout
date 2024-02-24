@@ -2,15 +2,9 @@
   display: flex;
   height: 100vh;
   gap: 10px 20px;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: center;
-
-  /* align-items: cross axis 방향에서 '항목' 정렬을 제어 */
-  align-items: center;
-
-  /* align-content: cross axis 방향에서 '라인'(항목 사이의 여백)의 정렬을 제어
-    (only in 'multi-line' flex box = wrap)  */
-  align-content: flex-end;  
+  align-items: center;  
 }
 
 .box {
@@ -22,4 +16,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* order: 0; --> defalut */
+}
+
+.box:nth-child(3) {
+  background-color: blueviolet;
+  order: 2;
+}
+
+.box:nth-child(6) {
+  background-color: aqua;
+  order: -1;
+}
+
+.box:first-child {
+  align-self: flex-start; 
+}
+
+.box:last-child {
+  align-self: flex-end;
 }
