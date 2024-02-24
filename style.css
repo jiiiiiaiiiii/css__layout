@@ -1,7 +1,7 @@
 .father {
   display: flex;
   height: 100vh;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: center;
 }
 
@@ -13,17 +13,25 @@
   align-items: center;
   justify-content: center;
 }
-
-/* 
-  flex-grow: flex 컨테이너 자식요소가 얼마만큼의 공간을 차지할 수 있는지 제어
-  (px단위가 아닌 '비율'로 계산)
- */
+/*
+  flex-shrink: item이 얼마나 줄어드는지 (자식요소 간 상대적인 '비율'로 계산)
+  (값이 클수록 -> 가장 먼저, 가장 크게 축소됨)
+*/
 .box:first-child {
   background-color: navy;
-  flex-grow: 1;
+  flex-grow: 0;    /* 필요한 최소 너비만 차지 */
+  flex-shrink: 3;
+}
+
+.box:nth-child(2) { 
+  background-color: aqua;
+  flex-grow: 2;
+  flex-shrink: 0; /* 축소 ❌: 내부 text의 줄바꿈 일어나지 않음 */
 }
 
 .box:last-child {
   background-color: teal;
-  flex-grow: 0;
+  flex-grow: 1;
+  flex-shrink: 1; /* default value */
 }
+
