@@ -1,10 +1,14 @@
-body {
+.father {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;  /* 자식요소 간, 간격 */
+  flex-direction: column; /* 자식요소들의 진행방향 */
+  flex-direction: row;    /* default value */
 }
 
 .box {
   width: 200px;
   height: 200px;
   background-color: navy;
+  color: white;
+  font-size: 36px;
 }
