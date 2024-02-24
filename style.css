@@ -1,8 +1,15 @@
 .father {
   display: flex;
-  gap: 10px;  /* 자식요소 간, 간격 */
-  flex-direction: column; /* 자식요소들의 진행방향 */
-  flex-direction: row;    /* default value */
+  height: 100vh;
+  gap: 10px;
+
+  /* 
+  - main axis  = flex-direction의 '진행' 방향
+  - cross axis = flex-direction의 '교차' 방향
+  */  
+  flex-direction: row-reverse;  /* end <----- start */
+  justify-content: flex-start;  /* main axis에서의 item 정렬 */
+  align-items: flex-end;        /* cross axis에서의 item 정렬 */
 }
 
 .box {
@@ -11,4 +18,7 @@
   background-color: navy;
   color: white;
   font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
