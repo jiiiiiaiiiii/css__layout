@@ -1,0 +1,30 @@
+/* SCSS 변수 */
+$bgColor: yellow;
+
+/* CSS 변수 */
+:root {
+  --bgColor: red;
+}
+
+body {
+  background-color: $bgColor;        // SCSS 변수 이용
+  background-color: var(--bgColor);  // CSS 변수 이용
+  padding: 0;
+  margin: 0;
+}
+
+.father {
+  display: grid;
+  gap: 10px;
+  height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.child {
+  background-color: navy;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
