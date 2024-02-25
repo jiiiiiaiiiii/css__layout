@@ -3,38 +3,26 @@ body {
   margin: 0;
   display: grid;
   height: 100vh;
-  
-  grid-template-columns: repeat(4, 1fr);  /* fr: fraction(부분, 일부), '비율' */
-  grid-template-rows: 1fr 2fr 1fr;
-  grid-template-areas:  /* grid-template-areas: text로 grid의 템플릿을 디자인 */
-    'a a a a'           /* tag명과 관련X -> 자식요소에서 'grid-area'로 요소별 설정 */
-    'b b b c'
-    'd d d d'
-  ;
-  
-  grid-template:    /* grid-template: -columns & -rows & -areas => short cut*/
-    'a a a a' 1fr   /* 1fr: row(행) 높이 */
-    'b b b c' 2fr
-    'd d d d' 1fr / repeat(4, 1fr)  /* column(열)의 너비 */
-  ;
+  gap: 10px 20px;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-header {
+.box {
   background-color: navy;
-  grid-area: a; /* 부모요소에서 정의한 grid-template-areas에 대한 각 요소별 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-section {
-  background-color: aqua;
-  grid-area: b;
-}
-
-aside {
+.box:first-child {
   background-color: teal;
-  grid-area: c;
+  /* grid-row: span 2;*/     /* 높이(2줄의 행) */
 }
 
-footer {
-  background-color: blue;
-  grid-area: d;
+.box:last-child {
+  background-color: aqua;
+  grid-column: 2 / span 2;   /* start line / 너비(2줄의 열) */
 }
