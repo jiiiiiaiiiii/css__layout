@@ -1,81 +1,26 @@
-/* == before Nesting ==
-
-ul {
-  list-style: none;
+body {
   padding: 0;
-  display: flex;
-  gap: 10px;
+  margin: 0;
 }
 
-ul li {
-  background-color: navy;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 7px;
-  width: 70px;
-  text-align: center;
+%alert {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px dashed black;
 }
 
-ul li:hover {
-  opacity: 0.8;
+.success {
+  @extend %alert;
+  background-color: rgb(0, 128, 0);
 }
 
-ul li:hover a {
-  font-weight: bold;
+.warning {
+  @extend %alert;
+  background-color: rgb(171, 238, 70)
 }
 
-ul li a {
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
+.error {
+  @extend %alert;
+  background-color: rgb(200, 240, 140);
 }
-
-==================== */
-
-
-
-/* == ✨ Nesting == */
-
-ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-
-  li {
-    background-color: navy;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 7px;
-    width: 70px;
-    text-align: center;
-    &:hover {
-      opacity: 0.8;
-      a {
-        font-weight: bold;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-    }
-  }
-}
-
-
-/* ===== Etc... ===== */
-/*
-
-li {
-  &:first-child {}
-  &:last-child {}
-  &.className {}
-}
-
-li:first-child {}
-li:last-child {}
-li.className {}
-
-*/
