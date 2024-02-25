@@ -1,28 +1,19 @@
-body {
-  padding: 0;
-  margin: 0;
+.father {
   display: grid;
-  height: 100vh;
-  gap: 10px 20px;
-
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  min-height: 50vh;
+  grid-template-columns: repeat(2, 1fr);  /* 상위 2개의 열에만 적용 */
+  grid-template-rows: repeat(2, 1fr);     /* 상위 2개의 행에만 적용 */
+  grid-auto-rows: 1fr;        /* grid-template에서 정의한 item 외(2 rows 외)에 적용되는 '행'크기(높이) */
+  grid-auto-columns: 0.5fr;   /* grid-template에서 정의한 item 외(2 columns 외)에 적용되는 '열'크기(너비) */
+  grid-auto-flow: column;     /* grid-auto-flow: item의 배치 방향(기존 & 추가된 item에 적용) | defalut = row */
 }
 
-.box {
+.child {
   background-color: navy;
+  color: white;
+  font-size: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-}
-
-.box:first-child {
-  background-color: teal;
-  /* grid-row: span 2;*/     /* 높이(2줄의 행) */
-}
-
-.box:last-child {
-  background-color: aqua;
-  grid-column: 2 / span 2;   /* start line / 너비(2줄의 열) */
 }
