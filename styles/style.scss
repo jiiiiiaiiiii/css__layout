@@ -1,30 +1,81 @@
-/* SCSS 변수 */
-$bgColor: yellow;
+/* == before Nesting ==
 
-/* CSS 변수 */
-:root {
-  --bgColor: red;
-}
-
-body {
-  background-color: $bgColor;        // SCSS 변수 이용
-  background-color: var(--bgColor);  // CSS 변수 이용
+ul {
+  list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-.father {
-  display: grid;
+  display: flex;
   gap: 10px;
-  height: 100vh;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.child {
+ul li {
   background-color: navy;
   color: white;
-  font-size: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 5px 10px;
+  border-radius: 7px;
+  width: 70px;
+  text-align: center;
 }
+
+ul li:hover {
+  opacity: 0.8;
+}
+
+ul li:hover a {
+  font-weight: bold;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+==================== */
+
+
+
+/* == ✨ Nesting == */
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+
+  li {
+    background-color: navy;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+    width: 70px;
+    text-align: center;
+    &:hover {
+      opacity: 0.8;
+      a {
+        font-weight: bold;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+/* ===== Etc... ===== */
+/*
+
+li {
+  &:first-child {}
+  &:last-child {}
+  &.className {}
+}
+
+li:first-child {}
+li:last-child {}
+li.className {}
+
+*/
