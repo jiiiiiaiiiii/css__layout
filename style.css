@@ -1,18 +1,13 @@
-/* content 크기에 따라 열 크기를 조절 */
+/* 반응형(Responsible) Grid */
 
 .father {
   display: grid;
   gap: 10px;
   min-height: 100vh;
 
-  /*
-  grid-template-columns: 1fr max-content 1fr;  * contents가 줄바꿈 없이 한줄로 표시되는 너비 *
-  grid-template-columns: 1fr min-content 1fr;  * 가장 긴 단어의 길이를 기준으로 너비 결정 *
-  */
-
-  grid-template-columns: 1fr minmax(300px, 1fr) 1fr;  /* minmax(최소, 최대) */
-  grid-template-columns: repeat(3, minmax(300px, 1fr))
-
+  /* screen 사이즈가 바뀌면 생기는 'extra space'에 대한 처리가 다름 */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));  /* 지정한 크기(100px)에 따른 최대한 많은 column 생성 => 빈 열(empty column)이 생길 수 있음 */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));   /* extra space를 없애며, cell contents 크기를 늘림 */
 }
 
 .child {
