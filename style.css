@@ -1,20 +1,18 @@
-/* cell 자체를 정렬하는 방법*/
+/* content 크기에 따라 열 크기를 조절 */
 
 .father {
   display: grid;
   gap: 10px;
   min-height: 100vh;
-  grid-template-columns: repeat(5, 100px);
-  grid-template-rows: repeat(2, 100px);
-  background-color: lightblue;
 
-  /* 
-  - grid-template에서 정의한 Grid-Container 바깥의 extra area가 남아있어야 적용됨
-    => grid-template을 repeat(5, ifr) 등으로 정의한 경우에는 extra area가 없기 때문에 아래 코드는 적용❌
+  /*
+  grid-template-columns: 1fr max-content 1fr;  * contents가 줄바꿈 없이 한줄로 표시되는 너비 *
+  grid-template-columns: 1fr min-content 1fr;  * 가장 긴 단어의 길이를 기준으로 너비 결정 *
   */
-  align-content: center;
-  justify-content: center;
-  place-content: center center;  /* 'align-content' & 'justify-content'의 short-cut */
+
+  grid-template-columns: 1fr minmax(300px, 1fr) 1fr;  /* minmax(최소, 최대) */
+  grid-template-columns: repeat(3, minmax(300px, 1fr))
+
 }
 
 .child {
