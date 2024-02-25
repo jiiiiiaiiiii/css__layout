@@ -1,26 +1,46 @@
+$breakpoint-sm: 0px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1200px;
+
+@mixin smallDevice {
+  @media screen and (min-width: $breakpoint-sm) {
+    @content; /* 각 요소별 @include 내 정의한 CSS 코드 적용 */
+  }
+}
+
+@mixin mediumDevice {
+  @media screen and (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin largeDevice {
+  @media screen and (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xlDevice {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
 body {
-  padding: 0;
-  margin: 0;
-}
+  @include smallDevice() {
+    background-color: black;
+  }
 
-/* @mixin 변수명($varName) { CSS 코드 } */
-@mixin alert($bgColor, $borderColor) {
-  background-color: $bgColor;
-  margin: 10px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 1px dashed $borderColor;
-}
+  @include mediumDevice() {
+    background-color: gray;
+  }
 
-/* @include 변수명(varValue) */
-.success {
-  @include alert(rgb(0, 128, 0), whitesmoke);
-}
+  @include largeDevice() {
+    background-color: darkgray;
+  }
 
-.warning {
-  @include alert(rgb(171, 238, 70), gray);
-}
-
-.error {
-  @include alert(rgb(200, 240, 140), black);
+  @include xlDevice() {
+    background-color: white;
+  }
 }
