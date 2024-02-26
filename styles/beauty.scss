@@ -1,0 +1,137 @@
+@import './reset.scss';
+
+$borderColor: rgba(0, 0, 0, 0.4);
+$borderWidth: 2px;
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #f3f6ff;
+}
+
+.container {
+  margin: 2.5vh 15px;
+  height: 95vh;
+  display: grid;
+  grid-template-rows: 1fr 10fr; /* .header & .pruduct*/
+  border: $borderWidth solid $borderColor;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.header {
+  .header_nav {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr) 1.5fr repeat(5, 1fr);
+      background-color: $borderColor;
+      gap: $borderWidth; /* fake grid border */
+      .header_tab {
+        overflow: hidden; /* < === */
+        text-overflow: ellipsis; /* text-overflow: ...처리 */
+        white-space: nowrap; /* === > */
+        background: white;
+        padding: 30px 10px;
+        text-align: center;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 16px;
+        &:nth-child(6) {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  .header_breadcrumbs {
+    border-top: $borderWidth solid $borderColor;
+    border-bottom: $borderWidth solid $borderColor;
+    background: white;
+    padding: 10px 0px 10px 30px;
+    font-size: 14px;
+  }
+  .header_crumb {
+    font-weight: 500;
+    &:last-child {
+      opacity: 0.6;
+    }
+  }
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  background-color: $borderColor;
+  gap: $borderWidth;
+  .product_img {
+    background-image: url('https://source.unsplash.com/random');
+    background-size: cover;
+  }
+  .product_info {
+    gap: $borderWidth;
+    display: grid;
+    grid-template-rows: 1.3fr 1fr;
+    .product_header {
+      background-color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 10px;
+			padding: 0 50px;
+			.product_category {
+				font-size: 18px;
+				text-transform: uppercase;
+			}
+			.proudct_title {
+				font-size: 48px;
+				font-weight: bold;
+				margin-bottom: 30px;
+			}
+			.product_add-to-cart {
+				display: flex;
+				gap: 50px;
+				.product_qty {
+					display: flex;
+					gap: 15px;
+					font-size: 36px;
+					.product_minus:first-child {
+						opacity: 0.5;
+					}
+				}
+				.product_price {
+					font-size: 36px;
+				}
+			}
+    }
+    .product_footer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $borderWidth;
+			& > div {
+				background-color: white;
+			}
+      .product_description p {
+        width: 70%;
+				font-size: 16px;
+				margin: 0 auto;
+				padding: 25px;
+				
+      }
+      .product_faq {
+				padding: 25px 50px;
+				white-space: nowrap;
+        .product_question{
+					border-bottom: $borderWidth solid $borderColor;
+					display: flex;
+					justify-content: space-between;
+					text-transform: uppercase;
+					font-weight: 600;
+					padding-bottom: 10px;
+					white-space: nowrap;
+					margin: 10px auto;
+				}
+      }
+    }
+  }
+}

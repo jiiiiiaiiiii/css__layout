@@ -1,72 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/fashion.scss">
-	<title>Fashion Store App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/beauty.scss">
+  <title>Beauty Store Web</title>
 </head>
+
 <body>
-	<div class="container">
-    <div class="phone">
-        <header class="header">
-          <span class="header_btn">🌎</span>
-          <h1 class="header_title">My Cart</h1>
-          <span class="header_btn">🛒</span>
-        </header>
-        <section class="total">
-          <span class="total_price">$ 3550</span>
-          <span class="total_subtitle">based on your 5 items</span>
-        </section>
-        <section class="items">
-          <article class="item">
-            <div class="item_info">
-              <div class="item_info-col">
-                <h2 class="item_title">Pop Temple Print T-Shirt</h2>
-                <h3 class="item_subtitle">limited 2002</h3>
-              </div>
-              <div class="item_info-col">
-                <span class="item_total-price">$ 1990</span>
-                <span class="item_piece-price">$ 995 per piece</span>
-              </div>
-            </div>
-            <div class="item_specs">
-              <div class="spec">
-                <span class="spec_title">Size</span>
-                <span class="spec_value">48 - L</span>
-              </div>
-              <div class="spec">
-                <span class="spec_title">QT</span>
-                <span class="spec_value">2 pcs</span>
-              </div>
-            </div>
-            <img src="https://source.unsplash.com/random" class="item_photo">
-          </article>
-          <article class="item">
-            <div class="item_info">
-              <div class="item_info-col">
-                <h2 class="item_title">Pop Temple Print T-Shirt</h2>
-                <h3 class="item_subtitle">limited 2002</h3>
-              </div>
-              <div class="item_info-col">
-                <span class="item_total-price">$ 1990</span>
-                <span class="item_piece-price">$ 995 per piece</span>
-              </div>
-            </div>
-            <div class="item_specs">
-              <div class="spec">
-                <span class="spec_title">Size</span>
-                <span class="spec_value">48 - L</span>
-              </div>
-              <div class="spec">
-                <span class="spec_title">QT</span>
-                <span class="spec_value">2 pcs</span>
-              </div>
-            </div>
-            <img src="https://source.unsplash.com/random" class="item_photo">
-          </article>
-        </section>
+  <div class="container">
+    <header class="header">
+      <nav class="header_nav">
+        <ul>
+          <li class="header_tab">🌎</li>
+          <li class="header_tab">Best Sellers</li>
+          <li class="header_tab">Hand Sanitizer</li>
+          <li class="header_tab">Hand Cream</li>
+          <li class="header_tab">Refills</li>
+          <li class="header_tab">GRID</li>
+          <li class="header_tab">Toothpaste</li>
+          <li class="header_tab">Hand Soap</li>
+          <li class="header_tab">Combos</li>
+          <li class="header_tab">😊</li>
+          <li class="header_tab">🛒</li>
+        </ul>
+      </nav>
+      <!-- ✔ Breadcrumbs: path to currPage -->
+      <div class="header_breadcrumbs">
+        <span class="header_crumb">Home /</span>
+        <span class="header_crumb">Catalog /</span>
+        <span class="header_crumb">Hand Soap /</span>
+        <span class="header_crumb">Sunset Fleur</span>
       </div>
+    </header>
+    <section class="product">
+      <div class="product_img"></div>
+      <div class="product_info">
+        <div class="product_header">
+          <span class="product_category">Hand Soap</span>
+          <h1 class="proudct_title">Sunset Fleur</h1>
+          <div class="product_add-to-cart">
+            <div class="product_qty">
+              <span class="product_minus">-</span>
+              <span class="product_total-qty">1</span>
+              <span class="product_plus">+</span>
+            </div>
+            <span class="product_price">$ 11.90</span>
+          </div>
+        </div>
+        <div class="product_footer">
+          <div class="product_description"><p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br><br> Enim atque ad
+              reiciendis fugit voluptates illo similique perspiciatis culpa odio, quis quidem tenetur, soluta a odit
+              incidunt maiores provident voluptatibus eaque.
+          </p></div>
+          <div class="product_faq">
+            <div class="product_question">How to use <span>+</div>
+            <div class="product_question">Ingredients <span>+</div>
+            <div class="product_question">Shipping & Payment <span>+</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </body>
+
 </html>
