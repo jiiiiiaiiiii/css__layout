@@ -1,0 +1,115 @@
+@import './reset.scss';
+
+$grey: #bcbfbf;
+$brown: #1f1414;
+$border: 5px solid $brown;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba($color: $grey, $alpha: 0.6);
+}
+
+.phone {
+  width: 480px;
+  height: 90%;
+  border-radius: 10px;
+  background-color: #c6caca;
+  box-shadow: 5px 10px 10px 5px rgba($color: #000000, $alpha: 0.5);
+	overflow: hidden;
+	padding: 50px 0;
+}
+
+.header {
+  padding: 0px 15px 20px;
+	font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header_title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.total {
+  background-color: $brown;
+  padding: 30px 15px;
+  color: $grey;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-weight: bold;
+  gap: 10px;
+  .total_price {
+    font-size: 30px;
+  }
+  .total_subtitle {
+    font-size: 15px;
+  }
+}
+
+.items {
+	display: flex;
+	flex-direction: column;
+	background-color: #C6CACA;
+	gap: 25px;
+	.item {
+		background-color: #D7DBDB;
+		border-top: $border;
+		position: relative;
+    .item_info {
+      padding: 30px 15px;
+      display: grid;
+			grid-template-columns: repeat(2, 1fr);
+      .item_info-col {
+        display: flex;
+        flex-direction: column;
+				gap: 10px;
+        &:nth-child(2) {
+          align-items: end;
+          .item_total-price {
+            font-size: 34px;
+          }
+          .item_piece-price {
+            font-size: 18px;
+          }
+        }
+        .item_title {
+          font-size: 44px;
+        }
+        .item_subtitle {
+          font-size: 18px;
+        }
+      }
+    }
+		.item_specs {
+			border-top: $border;
+			border-bottom: $border;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, 115px);
+			.spec {
+				padding: 25px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-transform: uppercase;
+				font-size: 20px;
+				&:last-child {
+					border-left: $border;
+				}
+			}
+		}
+  }
+	.item_photo {
+		position: absolute;
+		width: 50%;
+		height: 65%;
+		border: $border;
+		right: 15px;
+		bottom:  0px;
+		object-fit: cover;
+	}
+}
