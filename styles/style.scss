@@ -1,0 +1,102 @@
+@import './reset.scss';
+
+body {
+  background-color: #dce6d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone {
+  background-color: black;
+  border-radius: 50px;
+  height: 95%;
+  width: 420px;
+  padding: 50px 20px;
+}
+
+.header {
+  overflow-x: hidden; /* hidden | scroll */
+  .header_list {
+    display: flex;
+    color: white;
+    gap: 10px;
+    width: max-content; /* 줄바꿈 방지 */
+    .header_list-item {
+      border: 1px solid rgba($color: #fff, $alpha: 0.5); /* SCSS 문법 */
+      padding: 10px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.header_list-item-inverted {
+  background-color: white;
+  color: black;
+}
+
+.cards {
+  margin: 30px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  .cards_card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    .card_title {
+      font-size: 28px;
+			line-height: 35px;
+    }
+    .card_footer {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: 1px solid black;
+      }
+      .price {
+				background-color: #FFDD2C;
+      }
+      .length {
+        background-color: white;
+      }
+    }
+
+    &:first-child {
+      background-color: #292d33;
+
+      border: 1px solid white;
+      .card_title {
+        color: white;
+      }
+    }
+    &:nth-child(2) {
+      background-color: #fbfaf9;
+    }
+    &:nth-child(3) {
+      background-color: #f9fdbe;
+    }
+    &:nth-child(4) {
+      background-color: #b19ef6;
+    }
+    &:nth-child(5) {
+      background-color: #ffd4d4;
+    }
+    &:nth-child(6) {
+      background-color: #d8ffe4;
+    }
+
+    &:nth-child(3n) {
+      grid-column: span 2; /* 2개열 차지 */
+    }
+  }
+}
