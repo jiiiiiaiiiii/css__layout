@@ -4,65 +4,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/beauty.scss">
-  <title>Beauty Store Web</title>
+  <link rel="stylesheet" href="styles/design.scss">
+  <title>Design Agency</title>
 </head>
 
 <body>
   <div class="container">
-    <header class="header">
-      <nav class="header_nav">
-        <ul>
-          <li class="header_tab">🌎</li>
-          <li class="header_tab">Best Sellers</li>
-          <li class="header_tab">Hand Sanitizer</li>
-          <li class="header_tab">Hand Cream</li>
-          <li class="header_tab">Refills</li>
-          <li class="header_tab">GRID</li>
-          <li class="header_tab">Toothpaste</li>
-          <li class="header_tab">Hand Soap</li>
-          <li class="header_tab">Combos</li>
-          <li class="header_tab">😊</li>
-          <li class="header_tab">🛒</li>
-        </ul>
-      </nav>
-      <!-- ✔ Breadcrumbs: path to currPage -->
-      <div class="header_breadcrumbs">
-        <span class="header_crumb">Home /</span>
-        <span class="header_crumb">Catalog /</span>
-        <span class="header_crumb">Hand Soap /</span>
-        <span class="header_crumb">Sunset Fleur</span>
+    <div class="grid">
+      <div class="grid_col">
+        <header class="header">
+          <div class="header_top">
+            <span class="header_reviews">4.98</span>
+            <span class="header_label">Best Reviews</span>
+          </div>
+          <h1 class="header_title">Design</h1>
+          <h3 class="header_subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+        </header>
+        <div class="grid_img"></div>
+        <div class="grid_img"></div>
       </div>
-    </header>
-    <section class="product">
-      <div class="product_img"></div>
-      <div class="product_info">
-        <div class="product_header">
-          <span class="product_category">Hand Soap</span>
-          <h1 class="proudct_title">Sunset Fleur</h1>
-          <div class="product_add-to-cart">
-            <div class="product_qty">
-              <span class="product_minus">-</span>
-              <span class="product_total-qty">1</span>
-              <span class="product_plus">+</span>
+
+      <div class="grid_col">
+        <div class="subgrid">
+          <div class="grid_img"></div>
+          <nav class="nav">
+            <ul>
+              <li class="nav_item">About</li>
+              <li class="nav_item">Solutions</li>
+              <li class="nav_item">Portfolio</li>
+              <li class="nav_item">Blog</li>
+            </ul>
+            <span class="nav_cta">Hire Me</span> <!-- Call To Action -->
+          </nav>
+          <div class="grid_cells">
+            <div class="grid_cell">
+              <span>Recent <br> Collaborations</span>
             </div>
-            <span class="product_price">$ 11.90</span>
+            <div class="grid_cell">
+              <span>CBP-2</span>
+            </div>
+            <span class="grid_cell-cta">More Cases</span>
           </div>
+          <div class="grid_img"></div>
         </div>
-        <div class="product_footer">
-          <div class="product_description"><p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br><br> Enim atque ad
-              reiciendis fugit voluptates illo similique perspiciatis culpa odio, quis quidem tenetur, soluta a odit
-              incidunt maiores provident voluptatibus eaque.
-          </p></div>
-          <div class="product_faq">
-            <div class="product_question">How to use <span>+</div>
-            <div class="product_question">Ingredients <span>+</div>
-            <div class="product_question">Shipping & Payment <span>+</div>
-          </div>
+        <div class="blog-post">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error molestiae cupiditate blanditiis voluptas
+            deserunt optio! Reprehenderit nobis sit illo. Inventore qui saepe laborum, impedit consequuntur vitae
+            commodi labore asperiores voluptates.</p>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </body>
 

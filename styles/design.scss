@@ -1,0 +1,152 @@
+@import './reset.scss';
+
+$gridGap: 5px;
+$cellRadius: 10px;
+
+body {
+  height: 100vh;
+  background-color: #7d4aa9;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.container {
+  background-color: black;
+	min-width: 880px;
+  max-width: 80%;
+  height: 90%;
+	min-height: 720px;
+  padding: 25px;
+  box-sizing: border-box;
+  .grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: $gridGap;
+    height: 100%;
+    .grid_col {
+      & > * {
+        background-color: white;
+        border-radius: $cellRadius;
+      }
+      &:first-child {
+        display: grid;
+        gap: $gridGap;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2.3fr 1fr; // 부모요소(. grid)의 height값이 정의되어 있어야 함
+        .header {
+          grid-column: span 2;
+					padding: 30px 40px;
+					display: grid;
+					grid-template-rows: 0.1fr 2fr 0.6fr;
+					align-items: start;	// stretch 방지
+					.header_top {
+						display: flex;
+						justify-content: end;
+						gap: 20px;
+						.header_reviews {
+							font-size: 24px;
+						}
+						.header_label {
+							border-radius: $cellRadius;
+							background-color: #FFC830;
+							text-transform: uppercase;
+							font-weight: bold;
+							font-size: 12px;
+							padding: 5px 20px;
+						}
+					}
+					.header_title{
+						font-size: 98px;
+						align-self: center;
+						justify-self: center;
+						font-weight: bold;
+						text-transform: uppercase;
+					}
+					.header_subtitle {
+						font-size: 34px;
+						font-weight: 600;
+						border-top: 2px solid black;
+						padding-top: 10px;
+					}
+        }
+      }
+      &:last-child {
+        display: grid;
+        gap: $gridGap;
+        grid-template-rows: 2.3fr 1fr;
+        .subgrid {
+          background-color: black;
+          display: grid;
+          gap: $gridGap;
+          grid-template-columns: 1.3fr 1fr;
+          grid-template-rows: 1.3fr 1fr;
+          & > * {
+            background-color: black;
+            border-radius: $cellRadius;
+          }
+          .nav {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            text-transform: uppercase;
+            li {
+              margin-bottom: 30px;
+              font-size: 12px;
+            }
+            .nav_cta {
+              font-size: 20px;
+							font-weight: bold;
+            }
+          }
+          .grid_cells {
+            display: grid;
+						gap: $gridGap;
+            grid-template-rows: 1fr 1fr 2fr;
+						.grid_cell {
+							border-radius: $cellRadius;
+								font-size: 14px;
+								text-transform: uppercase;
+								padding-left: 20px;
+								display: flex;
+								align-items: center;
+							&:first-child {
+								background-color: #FFC830;
+							}
+							&:nth-child(2) {
+								background-color: white;
+								transform: rotateZ(10deg);
+								box-shadow: 2px 5px 10px rgba($color: #000000, $alpha: 0.8);
+							}
+						}
+						.grid_cell-cta {
+							color: white;
+							text-transform: uppercase;
+							font-size: 20px;
+							font-weight: bold;
+							padding-left: 20px;
+							margin-bottom: 20px;
+							align-self: flex-end;
+						}
+          }
+        }
+        .blog-post {
+					background-color: white;
+					display: flex;
+					align-items: end;
+					font-size: 14px;
+          p {
+            width: 80%;
+            padding: 20px;
+          }
+        }
+      }
+      .grid_img {
+        background-image: url('https://source.unsplash.com/random');
+        background-size: cover;
+      }
+    }
+  }
+}
