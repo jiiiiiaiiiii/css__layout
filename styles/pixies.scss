@@ -1,0 +1,114 @@
+@import './reset.scss';
+
+$white: #dee1d6;
+$green: #5ebc44;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster {
+  background: $green;
+  width: 660px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3fr 7fr;
+  .top {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    row-gap: 20px;
+    margin-bottom: 20px;
+    .top_box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      h1 {
+        font-size: 135px;
+        font-weight: bold;
+      }
+      &:first-child {
+        padding-left: 8px;
+      }
+      &:last-child {
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        align-self: center;
+      }
+    }
+  }
+  .bottom {
+    overflow: hidden;
+    .circles {
+      transform: scale(1.1);
+      background-color: black;
+      display: grid;
+      gap: 5px;
+      height: 100%;
+      grid-template: repeat(11, 1fr) / repeat(11, 1fr);
+      .circle {
+        background-color: $green;
+        border-radius: 50%;
+        &:nth-child(13),
+        &:nth-child(24),
+        &:nth-child(25),
+        &:nth-child(35),
+        &:nth-child(36),
+        &:nth-child(37),
+        &:nth-child(46),
+        &:nth-child(47),
+        &:nth-child(48),
+        &:nth-child(49),
+        &:nth-child(57),
+        &:nth-child(58),
+        &:nth-child(59),
+        &:nth-child(60),
+        &:nth-child(61),
+        &:nth-child(68),
+        &:nth-child(69),
+        &:nth-child(70),
+        &:nth-child(71),
+        &:nth-child(72),
+        &:nth-child(73),
+        &:nth-child(79),
+        &:nth-child(80),
+        &:nth-child(81),
+        &:nth-child(82),
+        &:nth-child(83),
+        &:nth-child(84),
+        &:nth-child(85),
+        &:nth-child(90),
+        &:nth-child(91),
+        &:nth-child(92),
+        &:nth-child(93),
+        &:nth-child(94),
+        &:nth-child(95),
+        &:nth-child(96),
+        &:nth-child(97),
+        &:nth-child(97),
+        &:nth-child(101),
+        &:nth-child(102),
+        &:nth-child(103),
+        &:nth-child(104),
+        &:nth-child(105),
+        &:nth-child(106),
+        &:nth-child(107),
+        &:nth-child(108),
+        &:nth-child(109) {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
