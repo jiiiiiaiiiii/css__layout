@@ -1,0 +1,68 @@
+@import './reset.css';
+@import './styles.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster {
+  background: #5ebc44;
+  width: 660px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3fr 7fr;
+}
+.poster .top {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  row-gap: 20px;
+  margin-bottom: 20px;
+}
+.poster .top .top_box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.poster .top .top_box h1 {
+  font-size: 135px;
+  font-weight: bold;
+}
+.poster .top .top_box:first-child {
+  padding-left: 8px;
+}
+.poster .top .top_box:last-child {
+  color: #DDDDD1;
+  padding-top: 40px;
+  font-size: 22px;
+  font-weight: 600;
+  align-self: center;
+}
+.poster .bottom {
+  overflow: hidden;
+}
+.poster .bottom .circles {
+  transform: scale(1.1);
+  background-color: black;
+  display: grid;
+  gap: 5px;
+  height: 100%;
+  grid-template: repeat(11, 1fr)/repeat(11, 1fr);
+}
+.poster .bottom .circles .circle {
+  background-color: #5ebc44;
+  border-radius: 50%;
+}
+.poster .bottom .circles .circle:nth-child(13), .poster .bottom .circles .circle:nth-child(24), .poster .bottom .circles .circle:nth-child(25), .poster .bottom .circles .circle:nth-child(35), .poster .bottom .circles .circle:nth-child(36), .poster .bottom .circles .circle:nth-child(37), .poster .bottom .circles .circle:nth-child(46), .poster .bottom .circles .circle:nth-child(47), .poster .bottom .circles .circle:nth-child(48), .poster .bottom .circles .circle:nth-child(49), .poster .bottom .circles .circle:nth-child(57), .poster .bottom .circles .circle:nth-child(58), .poster .bottom .circles .circle:nth-child(59), .poster .bottom .circles .circle:nth-child(60), .poster .bottom .circles .circle:nth-child(61), .poster .bottom .circles .circle:nth-child(68), .poster .bottom .circles .circle:nth-child(69), .poster .bottom .circles .circle:nth-child(70), .poster .bottom .circles .circle:nth-child(71), .poster .bottom .circles .circle:nth-child(72), .poster .bottom .circles .circle:nth-child(73), .poster .bottom .circles .circle:nth-child(79), .poster .bottom .circles .circle:nth-child(80), .poster .bottom .circles .circle:nth-child(81), .poster .bottom .circles .circle:nth-child(82), .poster .bottom .circles .circle:nth-child(83), .poster .bottom .circles .circle:nth-child(84), .poster .bottom .circles .circle:nth-child(85), .poster .bottom .circles .circle:nth-child(90), .poster .bottom .circles .circle:nth-child(91), .poster .bottom .circles .circle:nth-child(92), .poster .bottom .circles .circle:nth-child(93), .poster .bottom .circles .circle:nth-child(94), .poster .bottom .circles .circle:nth-child(95), .poster .bottom .circles .circle:nth-child(96), .poster .bottom .circles .circle:nth-child(97), .poster .bottom .circles .circle:nth-child(97), .poster .bottom .circles .circle:nth-child(101), .poster .bottom .circles .circle:nth-child(102), .poster .bottom .circles .circle:nth-child(103), .poster .bottom .circles .circle:nth-child(104), .poster .bottom .circles .circle:nth-child(105), .poster .bottom .circles .circle:nth-child(106), .poster .bottom .circles .circle:nth-child(107), .poster .bottom .circles .circle:nth-child(108), .poster .bottom .circles .circle:nth-child(109) {
+  background-color: white;
+}

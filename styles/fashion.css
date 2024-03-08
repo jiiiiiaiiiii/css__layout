@@ -1,0 +1,122 @@
+@import './reset.css';
+@import './styles.css';
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(188, 191, 191, 0.4);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.phone {
+  width: 480px;
+  height: 90%;
+  border-radius: 10px;
+  background-color: #c6caca;
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  padding: 50px 0 40px;
+}
+
+.header {
+  padding: 0px 15px 20px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header_title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.total {
+  background-color: #1f1414;
+  padding: 30px 15px;
+  color: #DEE2E2;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+.total .total_price {
+  font-size: 32px;
+}
+.total .total_subtitle {
+  font-size: 16px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  background-color: #C6CACA;
+  gap: 25px;
+}
+.items .item {
+  background-color: #D7DBDB;
+  border-top: 5px solid #1f1414;
+  position: relative;
+}
+.items .item .item_info {
+  padding: 20px 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.items .item .item_info .item_info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.items .item .item_info .item_info-col:nth-child(2) {
+  align-items: end;
+}
+.items .item .item_info .item_info-col:nth-child(2) .item_total-price {
+  font-size: 32px;
+}
+.items .item .item_info .item_info-col:nth-child(2) .item_piece-price {
+  font-size: 18px;
+}
+.items .item .item_info .item_info-col .item_title {
+  font-size: 44px;
+  text-transform: uppercase;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 3px;
+}
+.items .item .item_info .item_info-col .item_subtitle {
+  font-size: 16px;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 4px;
+}
+.items .item .item_specs {
+  border-top: 5px solid #1f1414;
+  border-bottom: 5px solid #1f1414;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 135px);
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.items .item .item_specs .spec {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+.items .item .item_specs .spec:last-child {
+  border-left: 5px solid #1f1414;
+}
+.items .item_photo {
+  position: absolute;
+  width: 40%;
+  height: 70%;
+  border: 5px solid #1f1414;
+  right: 15px;
+  bottom: 0px;
+  object-fit: cover;
+}
