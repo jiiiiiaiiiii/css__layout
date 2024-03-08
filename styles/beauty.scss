@@ -1,4 +1,5 @@
 @import './reset.scss';
+@import './styles.scss';
 
 $borderColor: rgba(0, 0, 0, 0.4);
 $borderWidth: 2px;
@@ -9,8 +10,9 @@ body {
 }
 
 .container {
-  margin: 2.5vh 15px;
-  height: 95vh;
+  margin: 5vh 5vw;
+  height: 90vh;
+  min-width: 1000px;
   display: grid;
   grid-template-rows: 1fr 10fr; /* .header & .pruduct*/
   border: $borderWidth solid $borderColor;
@@ -112,10 +114,10 @@ body {
 				background-color: white;
 			}
       .product_description p {
-        width: 70%;
+        width: 80%;
 				font-size: 16px;
 				margin: 0 auto;
-				padding: 25px;
+				padding: 30px;
 				
       }
       .product_faq {

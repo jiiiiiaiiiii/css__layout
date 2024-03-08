@@ -1,4 +1,6 @@
 @import './reset.scss';
+@import './styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 body {
   background-color: #dce6d1;
@@ -13,7 +15,8 @@ body {
   border-radius: 50px;
   height: 95%;
   width: 420px;
-  padding: 50px 20px;
+  padding: 50px 20px 35px 20px;
+  box-shadow: 5px 10px 10px 5px rgba($color: #000000, $alpha: 0.5);
 }
 
 .header {
@@ -43,15 +46,22 @@ body {
   gap: 10px;
   .cards_card {
     background-color: white;
-    padding: 10px;
+    padding: 12px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 40px;
+    gap: 25px;
+    &:nth-child(3n) .card_title {
+      font-size: 32px;
+      line-height: 1.4;
+      font-weight: 300;
+    }
     .card_title {
-      font-size: 28px;
+      font-size: 24px;
 			line-height: 35px;
+      letter-spacing: 1px;
+      font-family: "Merriweather", serif;
     }
     .card_footer {
       font-size: 14px;
@@ -61,7 +71,7 @@ body {
       span {
         padding: 10px 15px;
         border-radius: 20px;
-        border: 1px solid black;
+        border: 1.5px solid black;
       }
       .price {
 				background-color: #FFDD2C;
@@ -84,12 +94,18 @@ body {
     }
     &:nth-child(3) {
       background-color: #f9fdbe;
+      .price {
+				background-color: #E9AFFC;
+      }
     }
     &:nth-child(4) {
       background-color: #b19ef6;
     }
     &:nth-child(5) {
       background-color: #ffd4d4;
+      .price {
+				background-color: #E9AFFC;
+      }
     }
     &:nth-child(6) {
       background-color: #d8ffe4;

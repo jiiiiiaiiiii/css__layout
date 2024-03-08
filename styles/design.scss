@@ -1,4 +1,6 @@
 @import './reset.scss';
+@import './styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 $gridGap: 5px;
 $cellRadius: 10px;
@@ -9,14 +11,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: end;
+  font-family: 'Jost', sans-serif;
 }
 
 .container {
   background-color: black;
-	min-width: 880px;
+  min-width: 880px;
   max-width: 80%;
   height: 90%;
-	min-height: 720px;
+  min-height: 720px;
   padding: 25px;
   box-sizing: border-box;
   .grid {
@@ -36,39 +39,40 @@ body {
         grid-template-rows: 2.3fr 1fr; // 부모요소(. grid)의 height값이 정의되어 있어야 함
         .header {
           grid-column: span 2;
-					padding: 30px 40px;
-					display: grid;
-					grid-template-rows: 0.1fr 2fr 0.6fr;
-					align-items: start;	// stretch 방지
-					.header_top {
-						display: flex;
-						justify-content: end;
-						gap: 20px;
-						.header_reviews {
-							font-size: 24px;
-						}
-						.header_label {
-							border-radius: $cellRadius;
-							background-color: #FFC830;
-							text-transform: uppercase;
-							font-weight: bold;
-							font-size: 12px;
-							padding: 5px 20px;
-						}
-					}
-					.header_title{
-						font-size: 98px;
-						align-self: center;
-						justify-self: center;
-						font-weight: bold;
-						text-transform: uppercase;
-					}
-					.header_subtitle {
-						font-size: 34px;
-						font-weight: 600;
-						border-top: 2px solid black;
-						padding-top: 10px;
-					}
+          padding: 30px 40px;
+          display: grid;
+          grid-template-rows: 0.1fr 2fr 0.6fr;
+          align-items: start; // stretch 방지
+          .header_top {
+            display: flex;
+            justify-content: end;
+            gap: 20px;
+            .header_reviews {
+              font-size: 24px;
+            }
+            .header_label {
+              border-radius: 15px;
+              background-color: #ffc830;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: 12px;
+              line-height: 15px;
+              padding: 5px 20px;
+            }
+          }
+          .header_title {
+            font-size: 98px;
+            align-self: center;
+            justify-self: center;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          .header_subtitle {
+            font-size: 34px;
+            font-weight: 500;
+            border-top: 2px solid black;
+            padding-top: 10px;
+          }
         }
       }
       &:last-child {
@@ -94,49 +98,81 @@ body {
             text-transform: uppercase;
             li {
               margin-bottom: 30px;
-              font-size: 12px;
+              font-size: 14px;
             }
             .nav_cta {
               font-size: 20px;
-							font-weight: bold;
+              font-weight: 500;
             }
           }
           .grid_cells {
             display: grid;
-						gap: $gridGap;
+            gap: $gridGap;
             grid-template-rows: 1fr 1fr 2fr;
-						.grid_cell {
-							border-radius: $cellRadius;
-								font-size: 14px;
-								text-transform: uppercase;
-								padding-left: 20px;
-								display: flex;
-								align-items: center;
-							&:first-child {
-								background-color: #FFC830;
-							}
-							&:nth-child(2) {
-								background-color: white;
-								transform: rotateZ(10deg);
-								box-shadow: 2px 5px 10px rgba($color: #000000, $alpha: 0.8);
-							}
-						}
-						.grid_cell-cta {
-							color: white;
-							text-transform: uppercase;
-							font-size: 20px;
-							font-weight: bold;
-							padding-left: 20px;
-							margin-bottom: 20px;
-							align-self: flex-end;
-						}
+            .grid_cell {
+              overflow: hidden;
+              white-space: nowrap;
+              border-radius: $cellRadius;
+              font-size: 14px;
+              text-transform: uppercase;
+              padding-left: 15px;
+              display: flex;
+              align-items: center;
+              &:first-child {
+                background-color: #ffc830;
+              }
+              &:nth-child(2) {
+                background-color: white;
+                transform: rotateZ(10deg);
+                box-shadow: 2px 5px 10px rgba($color: #000000, $alpha: 0.8);
+              }
+            }
+            .grid_cell-cta {
+              color: white;
+              text-transform: uppercase;
+              font-size: 20px;
+              font-weight: 500;
+              padding-left: 20px;
+              margin-bottom: 20px;
+              align-self: flex-end;
+            }
           }
         }
         .blog-post {
-					background-color: white;
-					display: flex;
-					align-items: end;
-					font-size: 14px;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          font-size: 14px;
+          .blog_top {
+            width: 100%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 50px) 1fr;
+            gap: 20px;
+            .blog_icon {
+              display: inline-block;
+              width: 60px;
+              height: 80px;
+              border-radius: 30px;
+              border: 1px solid black;
+              text-align: center;
+              padding: 33px 0;
+            }
+            .blog_img {
+              border-radius: 30px;
+              width: 60px;
+              background-image: url('https://i.pinimg.com/736x/8c/4a/51/8c4a51e005629a084505649079b0a949.jpg');
+              background-size: cover;
+            }
+            .blog_label {
+              justify-self: end;
+              text-transform: uppercase;
+              font-weight: bold;
+              text-align: end;
+              line-height: 18px;
+            }
+          }
           p {
             width: 80%;
             padding: 20px;
@@ -144,7 +180,8 @@ body {
         }
       }
       .grid_img {
-        background-image: url('https://source.unsplash.com/random');
+        // background-image: url('https://source.unsplash.com/random');
+        background-image: url('https://i.pinimg.com/564x/6a/fc/5c/6afc5c43a5050054d7482202e3b75239.jpg');
         background-size: cover;
       }
     }
